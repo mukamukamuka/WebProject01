@@ -18,11 +18,11 @@ apply plugin: 'io.spring.dependency-management'
 
 group 'com.project01'
 version '1.0-SNAPSHOT'
+sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
     jcenter()
-    sourceCompatibility = 1.8
 }
 
 dependencies {
@@ -31,14 +31,9 @@ dependencies {
     annotationProcessor('org.projectlombok:lombok')
     implementation('org.springframework.boot:spring-boot-starter-data-jpa')
     implementation('com.h2database:h2')
-    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation('org.springframework.boot:spring-boot-starter-mustache')
     implementation('org.springframework.boot:spring-boot-starter-oauth2-client')
     implementation('org.springframework.session:spring-session-jdbc')
     testImplementation('org.springframework.boot:spring-boot-starter-test')
     testImplementation('org.springframework.security:spring-security-test')
-}
-
-test {
-    useJUnitPlatform()
 }
